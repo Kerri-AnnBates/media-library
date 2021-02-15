@@ -1,5 +1,7 @@
 <?php 
 	$pageTitle = "Personal Media Library";
+	$section = null;
+	
 	include("./partials/header.php"); 
 ?>
 
