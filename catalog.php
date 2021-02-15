@@ -1,18 +1,22 @@
 <?php 
-
-    switch($_GET["cat"]) {
-        case "books":
-            $pageTitle = "Books";
-            break;
-        case "movies":
-            $pageTitle = "Movies";
-            break;
-        case "music":
-            $pageTitle = "Music";
-            break;
-        default:
+    $pageTitle = "Full Catalog";
+    
+    if(isset($_GET["cat"])) {
+        switch($_GET["cat"]) {
+            case "books":
+                $pageTitle = "Books";
+                break;
+            case "movies":
+                $pageTitle = "Movies";
+                break;
+            case "music":
+                $pageTitle = "Music";
+                break;
+            default:
             $pageTitle = "Full Catalog";
+        }
     }
+    
 
     include("./partials/header.php"); 
 ?>
