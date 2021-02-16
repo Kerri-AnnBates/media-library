@@ -1,4 +1,5 @@
-<?php 
+<?php
+
     $pageTitle = "Full Catalog";
     $section = null;
 
@@ -23,11 +24,21 @@
     }
     
 
-    include("./partials/header.php"); 
+    include("./includes/header.php");
+    include("./includes/data.php");
 ?>
 
-<div class="section page">
-    <h1><?php echo $pageTitle; ?></h1>
+<div class="section catalog page">
+    <div class="wrapper">
+        <h1><?php echo $pageTitle; ?></h1>
+        <ul>
+            <?php 
+                foreach ($catalog as $item) {
+                    echo "<li>" . $item["title"] . "</li>";
+                }
+            ?>
+        </ul>
+    </div>
 </div>
 
-<?php include("./partials/footer.php"); ?>
+<?php include("./includes/footer.php"); ?>

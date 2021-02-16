@@ -1,8 +1,8 @@
 <?php 
 	$pageTitle = "Personal Media Library";
 	$section = null;
-	
-	include("./partials/header.php"); 
+
+	include("./includes/header.php"); 
 ?>
 
 	<div class="section catalog random">
@@ -26,4 +26,4 @@
 	</div>
 </div> <!-- End content -->
 
-<?php include("./partials/footer.php"); ?>
+<?php include("./includes/footer.php"); ?>
