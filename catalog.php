@@ -33,7 +33,7 @@
     <div class="wrapper">
         <h1><?php echo $pageTitle; ?></h1>
         <ul class="items">
-            <?php 
+            <?php
                 foreach ($catalog as $id => $item) {
                     echo get_item_html($id, $item);
                 }
