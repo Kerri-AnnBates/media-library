@@ -12,14 +12,17 @@ function array_category($catalog, $category) {
     if($category == null) {
         return array_keys($catalog);
     }
-    
+
     $output = array();
 
     foreach ($catalog as $id => $item) {
         if(strtolower($category) == strtolower($item["category"])) {
-            $output[] = $id;
+            $sortByTitle = $item["title"];
+
+            $output[$id] = $sortByTitle;
         }
     }
 
-    return $output;
+    asort($output);
+    return array_keys($output);
 }
