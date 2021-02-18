@@ -9,18 +9,15 @@ function get_item_html($id, $item) {
 }
 
 function array_category($catalog, $category) {
-    if($category == null) {
-        return array_keys($catalog);
-    }
-
     $output = array();
 
     foreach ($catalog as $id => $item) {
-        if(strtolower($category) == strtolower($item["category"])) {
+        if($category == null || strtolower($category) == strtolower($item["category"])) {
             $sortByTitle = $item["title"];
             $sortByTitle = ltrim($sortByTitle, "The ");
             $sortByTitle = ltrim($sortByTitle, "A ");
             $sortByTitle = ltrim($sortByTitle, "An ");
+
             $output[$id] = $sortByTitle;
         }
     }
